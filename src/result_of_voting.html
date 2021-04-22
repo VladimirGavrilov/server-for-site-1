@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Строим интерактивную карту с помощью Raphael | Демонстрация для сайта RUSELLER.COM</title>
+<link href="css/default.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery.js" type="text/javascript"></script>
+<script src="js/raphael.js" type="text/javascript"></script>
+<script src="js/paths.js" type="text/javascript"></script>
+<script src="js/init.js" type="text/javascript"></script>
+<style>
+	button.knopka {
+	color: #fff; 
+	background: #FFA500; 
+	padding: 5px; 
+	border-radius: 5px;
+	border: 2px solid #FF8247;
+	} 
+	button.knopka:hover { 
+	background: #FF6347; 
+	}
+</style>
+</head>
+
+<body>
+<div class="top"><!-- group -->
+	<div class="top1"><!-- content -->
+		<button class="knopka" onclick="window.location.href = 'index.html';">НАЗАД К КАРТЕ</button>
+		<button class="knopka" onclick="window.location.href = 'how_to_vote.html';">КАК ПРОГОЛОСОВАТЬ</button> 
+		
+    </div>
+	<a href="index.php">
+	<!-- image --><img class="block" id="u528_img" src="img/euro-uefa-696x418.jpg?crc=3892822180" alt="" title="EURO2021" data-heightwidthratio="0.6012461059190031" data-image-width="321" data-image-height="193"/>
+	</a>
+   </div>
+    <div id="wr1">
+		<table cellspacing="0">
+   <tr>
+    <th>Команда</th><th colspan="2">Голосов </th> 
+   </tr>
+   <tr>
+    <td colspan="2"><h3>Группа A'</h3></td> 
+   </tr>
+   <tr>
+    <td>Италия</td><td>28</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td>'Швейцария'</td><td>29</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td>'Турция'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td>'Уэльс'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td colspan="2"><h3>Группа B'</h3></td> 
+   </tr>
+   <tr>
+    <td>'Бельгия'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td>'Дания'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td>'Финляндия'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td>'Россия'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td colspan="2"><h3>Группа C'</h3></td> 
+   </tr>
+   <tr>
+    <td>'Австрия'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td>'Нидерланды'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td>'Северная Македония'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td>'Нидерланды'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td colspan="2"><h3>Группа C'</h3></td> 
+   </tr>
+   <tr>
+    <td>'Хорватия'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td>
+   </tr>
+   <tr>
+    <td>'Чехия'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td>'Англия'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td>'Шотландия'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td colspan="2"><h3>Группа C'</h3></td> 
+   </tr>
+   <tr>
+    <td>'Польша'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td>
+   </tr>
+   <tr>
+    <td>'Словакия'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td>'Испания'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td>'Швеция'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td colspan="2"><h3>Группа C'</h3></td> 
+   </tr>
+   <tr>
+    <td>'Франция'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td>'Германия'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td>'Венгрия'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+   <tr>
+    <td>'Швеция'</td><td>43</td><td><button class="knopka" onclick="window.location.href = 'redme.html';">Прочитай</button></td> 
+   </tr>
+  </table>
+  
+	</div>
+<div class="futer" id="u112-6"><!-- content -->
+     <img class="block" id="u528_img" src="img/1575761429_1-3.jpg" alt=""/><h2>Твой голос по стоимости гамбургера!</h2>
+     <h2>Поддержи свою команду!!!</h2>
+    </div>
+</body>
+</html>
