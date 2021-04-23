@@ -1,9 +1,10 @@
+require('dotenv').config()
 const fs = require('fs');
 ///подключение локального сервера
 const http = require('http');
 const express = require('express')
 const app = express()
-const port = 3000
+const PORT = process.env.PORT || 4000
 
 app.get('/', (req, res) => res.send('Hello World!'))
-app.listen(port, () => console.log(`Example app listening on port port!`))
+app.listen(PORT, () => console.log(`Example app listening on ${PORT} port!`))
