@@ -1,2 +1,2 @@
  npm install express pg pg-hstore sequelize cors dotenv
- npm -D nodemon
+ npm install -D nodemon
